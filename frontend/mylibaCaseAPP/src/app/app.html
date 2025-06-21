@@ -1,0 +1,23 @@
+<div *ngIf="errorMessage" class="alert alert-danger">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="successMessage" class="alert alert-success">
+  {{ successMessage }}
+</div>
+
+<div class="container-header">
+    <h1>Add / Update Personal</h1>  
+<div class="app-container">  
+   <app-personal-form
+    [personalToEdit]="editingPersonal"  (personalAdded)="onPersonalAdded($event)"
+    (personalUpdated)="onPersonalUpdated($event)"
+  ></app-personal-form>
+ <app-personal-contact-list
+    [personalList]="personalContacts"
+    (personalToEdit)="onPersonalEdit($event)" (personalToDelete)="onPersonalDelete($event)"
+  ></app-personal-contact-list>
+  <router-outlet></router-outlet>
+</div>
+
+</div>

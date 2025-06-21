@@ -1,0 +1,13 @@
+<div class="contact-list-container">
+  <h2>UPDATE / DELETE PERSONAL</h2>
+  <div *ngIf="personalList.length === 0" class="no-contacts">
+    Henüz Eklenmiş Bir Kişi Yok.
+  </div>
+  <div *ngFor="let personal of personalList; let i = index" class="contact-item">
+    <span>{{ personal?.name }} {{ personal?.surname }}, {{ personal?.email }}</span>
+    <div class="actions">
+      <button (click)="editPersonal(personal)" class="icon-button edit-button" title="Düzenle">✏️</button>
+      <button (click)="deletePersonal(personal.id!)" class="icon-button delete-button" title="Sil">🗑️</button>
+    </div>
+  </div>
+</div>

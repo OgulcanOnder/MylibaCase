@@ -1,0 +1,33 @@
+<div class="personal-form-container">
+  <h2>ADD PERSONAL</h2>
+  <div class="form-group">
+    <form [formGroup]="form" (ngSubmit)="addOrUpdatePersonal()">
+  <!-- Name -->
+  <label>Name:</label>
+  <input type="text" formControlName="name" placeholder="Name" />
+  <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    <small *ngIf="form.get('name')?.errors?.['required']">Name zorunlu</small>
+    <small *ngIf="form.get('name')?.errors?.['pattern']">Geçerli bir Name giriniz</small>
+  </div>
+
+  <!-- Surname -->
+  <label>Surname:</label>
+  <input type="text" formControlName="surname" placeholder="Surname" />
+  <div *ngIf="form.get('surname')?.invalid && form.get('surname')?.touched">
+    <small style="color: red;" *ngIf="form.get('surname')?.errors?.['required']">Surname Zorunlu</small>
+    <small *ngIf="form.get('surname')?.errors?.['pattern']">Geçerli bir Surname giriniz</small>
+  </div>
+
+  <!-- Email -->
+  <label>Email:</label>
+  <input type="email" formControlName="email" placeholder="Email"/>
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    <small *ngIf="form.get('email')?.errors?.['required']">Email zorunlu</small>
+    <small *ngIf="form.get('email')?.errors?.['email']">Geçerli bir email giriniz</small>
+  </div>
+
+  <!-- Submit Butonu -->
+  <button type="submit" [disabled]="form.invalid">{{isEditing ? 'Update' : 'Add'}}</button> <button type="button" *ngIf="isEditing" (click)="resetForm()" class="cancel-button">Cancel</button>
+</form>
+
+</div>
