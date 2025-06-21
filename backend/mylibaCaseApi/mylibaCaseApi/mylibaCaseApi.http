@@ -1,0 +1,6 @@
+@mylibaCaseApi_HostAddress = http://localhost:5269
+
+GET {{mylibaCaseApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
