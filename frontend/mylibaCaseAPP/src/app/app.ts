@@ -4,7 +4,7 @@ import { PersonalForm } from './personal-form/personal-form';
 import { PersonalContactList } from './personal-contact-list/personal-contact-list';
 import { CommonModule } from '@angular/common';
 import { PersonalService } from './personal-service';
-import { EMPTY, Observable,of } from 'rxjs';
+import { EMPTY} from 'rxjs';
 import { catchError,tap } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 

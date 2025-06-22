@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output,OnChanges,SimpleChange } from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { ReactiveFormsModule,FormBuilder,FormGroup,Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 interface Personal{
