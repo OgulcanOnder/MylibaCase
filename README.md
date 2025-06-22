@@ -30,6 +30,15 @@
 - **API URL:** http://localhost:5269/api/user
 - **MongoDB Bağlantısı:** mongodb://localhost:27017
 
+## Projeyi Çalıştırırken
+### Frontend
+- **Angular**, dosyasını çalıştırmak istediğinizde önceden altta belirtilen komutu terminalde çalıştırınız. 
+```
+npm install
+```
+### Backend
+- **.Net Core API**, dosyasını çalıştırmak istediğinizde client ile başarılı bir şekilde bağlantı kurabilmesi için http olarak çalıştırınız.
+
 ### Proje Github Klonu
 
 ```
